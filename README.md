@@ -246,7 +246,7 @@ In this step, you deploy the API that you created to a stage called prod.
     "payload": {
         "Item": {
             "id": "1234ABCD",
-            "number": 6
+            "number": 5
         }
     }
 }
