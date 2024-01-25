@@ -146,3 +146,13 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 
 
 2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from input event as output. Click "Create" to save
+
+```json
+{
+    "operation": "echo",
+    "payload": {
+        "somekey1": "somevalue1",
+        "somekey2": "somevalue2"
+    }
+}
+```
