@@ -157,3 +157,10 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 }
 ```
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/312d15ae-b553-4f67-8016-5380ed99a67c)
+
+3. Click "Test", and it will execute the test event. You should see the output in the console
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/bc1c6195-a055-4ceb-a175-b3c496dda319)
+
+
+
