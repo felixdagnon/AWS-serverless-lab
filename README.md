@@ -87,14 +87,29 @@ To create an execution role
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/b63d5300-3b03-4d61-8efe-578f5870f596)
 
-
 2. Select "Author from scratch". Use name **LambdaFunctionOverHttps** , select **Python 3.7** as Runtime. Under Permissions, select "Use an existing role", and select **lambda-apigateway-role** that we created, from the drop down
 
 3. Click "Create function"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/0b9f210c-44cb-46ba-b22d-c8fefcf4c546)
 
-
 4. Replace the boilerplate coding with the following code snippet and click "Save"
 
 **Example Python Code*
+
+```python
+from __future__ import print_function
+
+import boto3
+import json
+
+print('Loading function')
+
+
+def lambda_handler(event, context):
+    '''Provide an event that contains the following keys:
+
+      - operation: one of the operations in the operations dict below
+      - tableName: required for operations that interact with DynamoDB
+      - payload: a parameter to pass to the operation being performed
+    '''
