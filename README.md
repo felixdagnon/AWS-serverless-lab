@@ -138,3 +138,11 @@ def lambda_handler(event, context):
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/b3f4be8e-e3b9-4ff6-b6b9-219b643fc976)
 
 ### Test Lambda Function
+
+Let's test our newly created function. We haven't created DynamoDB and the API yet, so we'll do a sample echo operation. The function should output whatever input we pass.
+1. Click the arrow on "Select a test event" and click "Configure test events"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4f8e4075-d32f-4c52-8511-bd72a2220582)
+
+
+2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from input event as output. Click "Create" to save
