@@ -163,3 +163,17 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/bc1c6195-a055-4ceb-a175-b3c496dda319)
 
 We're all set to create DynamoDB table and an API using our lambda as backend!
+
+### Create DynamoDB Table
+
+Create the DynamoDB table that the Lambda function uses.
+
+**To create a DynamoDB table**
+
+1. Open the DynamoDB console.
+2. Choose Create table.
+3. Create a table with the following settings.
+   * Table name – lambda-apigateway
+   * Primary key – id (string)
+4. Choose Create.
+
