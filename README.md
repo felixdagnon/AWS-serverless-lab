@@ -187,4 +187,39 @@ Create the DynamoDB table that the Lambda function uses.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/6d82fe51-3d45-47a6-8aa9-d9932ade9a13)
 
+3. Scroll down and select "Build" for REST API
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/720d146a-2420-48fb-9788-483426b1f69b)
+
+4. Give the API name as "DynamoDBOperations", keep everything as is, click "Create API"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/48bba13c-73c6-49bb-877f-9b3ae8518591)
+
+5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
+
+Click "Actions", then click "Create Resource"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/f2ffaf95-7b26-40e5-a238-80f0fa9e4070)
+
+6. Input "DynamoDBManager" in the Resource Name, Resource Path will get populated. Click "Create Resource"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4f7a6601-449b-4282-836e-5d560badbf9b)
+
+7. Let's create a POST Method for our API. With the "/dynamodbmanager" resource selected, Click "Actions" again and click "Create Method". 
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/5f550e7d-dd38-4365-ab50-dd71f0c63bcc)
+
+8. Select "POST" from drop down , then click checkmark
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/429bfb71-0316-4cf7-a337-5f69de90b2e9)
+
+9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name, your function name will show up.Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/fce973b6-5447-409a-a83f-18c760340f5c)
+
+Our API-Lambda integration is done!
+
+### Deploy the API
+
+
 
