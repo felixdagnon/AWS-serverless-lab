@@ -39,3 +39,4 @@ The following is a sample request payload for a DynamoDB read item operation:
 }
 ```
 ## Setup
+### Create Lambda IAM Role 
