@@ -156,3 +156,4 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
     }
 }
 ```
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/312d15ae-b553-4f67-8016-5380ed99a67c)
