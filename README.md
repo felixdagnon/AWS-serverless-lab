@@ -179,5 +179,12 @@ Create the DynamoDB table that the Lambda function uses.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/96072470-2744-4b3c-b681-eec39b05eabf)
 
+### Create API
+
+**To create the API**
+1. Go to API Gateway console
+2. Click Create API
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/6d82fe51-3d45-47a6-8aa9-d9932ade9a13)
 
 
