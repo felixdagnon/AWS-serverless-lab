@@ -136,3 +136,5 @@ def lambda_handler(event, context):
         raise ValueError('Unrecognized operation "{}"'.format(operation))
 ```
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/b3f4be8e-e3b9-4ff6-b6b9-219b643fc976)
+
+### Test Lambda Function
