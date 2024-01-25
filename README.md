@@ -221,5 +221,22 @@ Our API-Lambda integration is done!
 
 ### Deploy the API
 
+In this step, you deploy the API that you created to a stage called prod.
+
+1. Click "Actions", select "Deploy API"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/46aa17fe-c86c-45b3-9f72-537b94d99514)
+
+2. Now it is going to ask you about a stage. Select "[New Stage]" for "Deployment stage". Give "Prod" as "Stage name". Click "Deploy"
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/0e8670fc-bf11-4801-a2b5-54a6beed51fa)
+
+3. We're all set to run our solution! To invoke our API endpoint, we need the endpoint url. In the "Stages" screen, expand the stage "Prod", select "POST" method, and copy the "Invoke URL" from screen
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/a48aac11-b305-4c78-903f-848aea439aea)
+
+
+
+
 
 
