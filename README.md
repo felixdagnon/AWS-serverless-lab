@@ -235,6 +235,26 @@ In this step, you deploy the API that you created to a stage called prod.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/a48aac11-b305-4c78-903f-848aea439aea)
 
+### Running our solution
+
+1. The Lambda function supports using the create operation to create an item in your DynamoDB table. To request this operation, use the following JSON:
+
+```json
+{
+    "operation": "create",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "1234ABCD",
+            "number": 5
+        }
+    }
+}
+```
+2. To execute our API from local machine, we are going to use Postman and Curl command. You can choose either method based on your convenience and familiarity. 
+    * To run this from Postman, select "POST" , paste the API invoke url. Then under "Body" select "raw" and paste the above JSON. Click "Send". API should execute and return "HTTPStatusCode" 200.
+
+
 
 
 
