@@ -177,3 +177,7 @@ Create the DynamoDB table that the Lambda function uses.
    * Primary key – id (string)
 4. Choose Create.
 
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/96072470-2744-4b3c-b681-eec39b05eabf)
+
+
+
