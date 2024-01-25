@@ -50,7 +50,8 @@ To create an execution role
     * Trusted entity – Lambda.
     * Role name – **lambda-apigateway-role**.
     * Permissions – Custom policy with permission to DynamoDB and CloudWatch Logs. This custom policy has the permissions that  the function needs t write data to DynamoDB and upload logs.
-```json
+      
+    ```json
     {
     "Version": "2012-10-17",
     "Statement": [
