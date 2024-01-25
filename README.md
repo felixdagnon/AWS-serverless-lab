@@ -14,3 +14,15 @@ Other operations (echo, ping), not related to DynamoDB, that you can use for tes
 The request payload you send in the POST request identifies the DynamoDB operation and provides necessary data. For example:
 
 The following is a sample request payload for a DynamoDB create item operation:
+```json
+{
+    "operation": "create",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Item": {
+            "id": "1",
+            "name": "Bob"
+        }
+    }
+}
+```
