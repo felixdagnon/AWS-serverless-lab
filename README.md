@@ -1,4 +1,4 @@
-# AWS-serverless-lab
+# AWS serverless-lab
 Level up Lab for serverless
 
 
