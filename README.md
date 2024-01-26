@@ -348,13 +348,16 @@ Let's clean up the resources we have created for this lab.
 
 To delete the table, from DynamoDB console, select the table "lambda-apigateway", and click "Delete table"
 
-
+![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/76c54e4a-54ee-4e97-9df6-49d98476121f)
 
 To delete the Lambda, from the Lambda console, select lambda "LambdaFunctionOverHttps", click "Actions", then click Delete 
 
-
+![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/93788cf8-1cbf-4beb-a688-c23cb39fefd4)
 
 To delete the API we created, in API gateway console, under APIs, select "DynamoDBOperations" API, click "Actions", then "Delete"
+
+![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/c856d48a-599b-43a9-8cb2-348f0bff5eac)
+
 
 
 
