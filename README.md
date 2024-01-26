@@ -276,6 +276,65 @@ In this step, you deploy the API that you created to a stage called prod.
 ```
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/21474b21-71e5-4cfe-b064-e06d4f879665)
 
+5. The Lambda function supports using the create operation to update an item in your DynamoDB table. To request this operation, use the following JSON:
+
+```json
+{
+    "operation": "update",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1234ABCD"
+        },
+        "AttributeUpdates": {
+            "number": {
+                "Value": 10
+            }
+        }
+    }
+}
+```
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/62fe43be-4b1e-47c0-a7eb-6ecf30d186c9)
+
+6. The Lambda function supports using the create operation to delete an item in your DynamoDB table. To request this operation, use the following JSON:
+
+```json
+{
+    "operation": "delete",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1235ABCD"
+        }
+    }
+}
+```
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/7e037214-de23-45e7-a1f2-497657ea4728)
+
+7. The Lambda function supports using the create operation to read an item in your DynamoDB table. To request this operation, use the following JSON:
+
+```json
+{
+    "operation": "read",
+    "tableName": "lambda-apigateway",
+    "payload": {
+        "Key": {
+            "id": "1237ABCD"
+        }
+    }
+}
+```
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/d84c56e2-d27a-4d7d-b0b7-c97d09f84f3b)
+
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/419e26ba-24d5-4cac-9ceb-69f956113676)
+
+
+
+
+
+
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
 ## Cleanup
