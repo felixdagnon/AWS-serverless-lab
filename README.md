@@ -1,7 +1,8 @@
 # AWS-serverless-lab
 Level up Lab for serverless
 
-![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/394f7201-1a03-4bde-bfb8-1f7d201c2cc1)
+![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
+
 
 An Amazon API Gateway is a collection of resources and methods. For this tutorial, you create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
