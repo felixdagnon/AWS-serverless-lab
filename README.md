@@ -365,4 +365,3 @@ To delete the API we created, in API gateway console, under APIs, select "Dynamo
 
 
 
-
