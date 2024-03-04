@@ -19,7 +19,7 @@ A similarly for RDS, we needed to select EC2 instance type.And even when there i
 
 as well as the secondary instance that's created because of the multi AC database.
 
-Another thing is you needed to define the auto scaling group and you have to define when to scale out and all that stuff.
+Another thing is we needed to define the auto scaling group and we have to define when to scale out and all that stuff.
 
 - Now the serverless design is much simpler and a lot of the features is provided out of the box.
 
@@ -33,7 +33,7 @@ We don't need to do anything.
 
 Another difference is for ec2 running the Web server in the first diagram, we have to go define the auto scaling group.
 
-If we have not defined it, we won't be able to scale and you will get error. With lambda we do not need to go define
+If we have not defined it, we won't be able to scale and we will get error. With lambda we do not need to go define
 
 any auto scaling group. If there are multiple traffic, this lambda will scale up automatically and handle that traffic.
 
@@ -67,15 +67,15 @@ Now that we have the architecture explained, let's jump into the console, deploy
 
 An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. 
 
-The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
 Create, update, and delete an item.
 Read an item.
 Scan an item.
-Other operations (echo, ping), not related to DynamoDB, that you can use for testing.
-The request payload you send in the POST request identifies the DynamoDB operation and provides necessary data. For example:
+Other operations (echo, ping), not related to DynamoDB, that we can use for testing.
+The request payload we send in the POST request identifies the DynamoDB operation and provides necessary data. For example:
 
 The following is a sample request payload for a DynamoDB create item operation:
 ```json
@@ -106,7 +106,7 @@ The following is a sample request payload for a DynamoDB read item operation:
 
 ### Create Lambda IAM Role 
 
-Create the execution role that gives your function permission to access AWS resources.
+Create the execution role that gives our function permission to access AWS resources.
 
 To create an execution role
 
@@ -229,7 +229,7 @@ In this case, it'd simply return the payload from input event as output. Click "
 ```
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/312d15ae-b553-4f67-8016-5380ed99a67c)
 
-3. Click "Test", and it will execute the test event. You should see the output in the console
+3. Click "Test", and it will execute the test event. We should see the output in the console
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/bc1c6195-a055-4ceb-a175-b3c496dda319)
 
@@ -268,7 +268,7 @@ Create the DynamoDB table that the Lambda function uses.
 
 5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services.
 
-Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
+Typically, API resources are organized in a resource tree according to the application logic. At this time we only have the root resource, but let's add a resource next 
 
 Click "Actions", then click "Create Resource"
 
@@ -288,7 +288,7 @@ Click "Actions", then click "Create Resource"
 
 9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier.
 
-As you start typing the name, your function name will show up.Select and click "Save". 
+As we start typing the name, our function name will show up.Select and click "Save". 
 
 A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
 
@@ -298,13 +298,13 @@ Our API-Lambda integration is done!
 
 ### Deploy the API
 
-In this step, you deploy the API that you created to a stage called prod.
+In this step, we deploy the API that we created to a stage called prod.
 
 1. Click "Actions", select "Deploy API"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/46aa17fe-c86c-45b3-9f72-537b94d99514)
 
-2. Now it is going to ask you about a stage. Select "[New Stage]" for "Deployment stage". Give "Prod" as "Stage name". Click "Deploy"
+2. Now it is going to ask us about a stage. Select "[New Stage]" for "Deployment stage". Give "Prod" as "Stage name". Click "Deploy"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/0e8670fc-bf11-4801-a2b5-54a6beed51fa)
 
@@ -314,7 +314,7 @@ In this step, you deploy the API that you created to a stage called prod.
 
 ### Running our solution
 
-1. The Lambda function supports using the create operation to create an item in your DynamoDB table. To request this operation, use the following JSON:
+1. The Lambda function supports using the create operation to create an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
@@ -328,7 +328,7 @@ In this step, you deploy the API that you created to a stage called prod.
     }
 }
 ```
-2. To execute our API from local machine, we are going to use Postman and Curl command. You can choose either method based on your convenience and familiarity.
+2. To execute our API from local machine, we are going to use Postman and Curl command. We can choose either method based on our convenience and familiarity.
    
     * To run this from Postman, select "POST" , paste the API invoke url. Then under "Body" select "raw" and paste the above JSON. Click "Send". API should
 
@@ -360,7 +360,7 @@ return all the items from the Dynamo table
 ```
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/21474b21-71e5-4cfe-b064-e06d4f879665)
 
-5. The Lambda function supports using the create operation to update an item in your DynamoDB table. To request this operation, use the following JSON:
+5. The Lambda function supports using the create operation to update an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
@@ -381,7 +381,7 @@ return all the items from the Dynamo table
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/62fe43be-4b1e-47c0-a7eb-6ecf30d186c9)
 
-6. The Lambda function supports using the create operation to delete an item in your DynamoDB table. To request this operation, use the following JSON:
+6. The Lambda function supports using the create operation to delete an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
@@ -397,7 +397,7 @@ return all the items from the Dynamo table
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/7e037214-de23-45e7-a1f2-497657ea4728)
 
-7. The Lambda function supports using the create operation to read an item in your DynamoDB table. To request this operation, use the following JSON:
+7. The Lambda function supports using the create operation to read an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
