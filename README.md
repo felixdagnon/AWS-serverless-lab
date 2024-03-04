@@ -5,7 +5,8 @@ Introduction
 
 Let's see this diagram:
 
-![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/933bf6f2-622a-4e70-89ec-53dd568fccaa)
+![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/a5371f82-14d4-42f9-9e37-7ed4d12aab64)
+
 
 
 
