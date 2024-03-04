@@ -286,9 +286,11 @@ Click "Actions", then click "Create Resource"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/429bfb71-0316-4cf7-a337-5f69de90b2e9)
 
-9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name,
+9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier.
 
-your function name will show up.Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
+As you start typing the name, your function name will show up.Select and click "Save". 
+
+A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/fce973b6-5447-409a-a83f-18c760340f5c)
 
