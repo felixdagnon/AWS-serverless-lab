@@ -3,18 +3,70 @@ Level up Lab for serverless
 
 Introduction
 
-Let's see this diagram:
+Let's see these 2 diagrams considering create website:
 
-![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/a5371f82-14d4-42f9-9e37-7ed4d12aab64)
+![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/8f9ba5b1-7e7c-4aaa-aa18-97d496d421a8)
 
 
+Before doing the serverless microservice project,we will make the differences between non serverless and serverless architecture.
 
+In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS)  and serverless (API Gateway, lambda, DynamoDB) architecture.
+
+- The fisrt diagram We had to create ac2 and even when there is no traffic to our website, this is it is still up and running, 
+
+so we still need to pay for these ec2 even the utilization is very low.
+
+A similarly for RDS, we needed to select EC2 instance type.And even when there is no utilization, we still need to pay for this instance 
+
+as well as the secondary instance that's created because of the multi AC database.
+
+Another thing is you needed to define the auto scaling group and you have to define when to scale out and all that stuff.
+
+- Now the serverless design is much simpler and a lot of the features is provided out of the box.
+
+Instead of application load balancer,  we are going to use API gateway and the back end of the business logic runs on Lambda.
+
+So the big difference between EC2 and lambda is lambda will scale automatically if there are a lot of traffic coming in.
+
+Also API Gateway is a fully managed API gateway service will scale automatically like application load balancer .
+
+We don't need to do anything.
+
+Another difference is for ec2 running the Web server in the first diagram, we have to go define the auto scaling group.
+
+If we have not defined that this is it, we won't be able to scale and you will get error. With lambda do not need to go define
+
+any auto scaling group. If there are multiple traffic, this lambda will scale up automatically and handle that traffic.
+
+Another advantage Lambda is highly available. So even when one availability zone goes down, lambda will be up and running.
+
+- Now the underlying database will be Dynamo.
+
+So Dynamo DB is a double OSS flagship, no SQL database compared to RDS, which is a relational database.
+
+And the difference here is for RDS, we made it multi AZ by clicking option but we pay for it but the failover is automatic.
+
+But with DynamoDB it is inherently highly available. We don't need to go select anything.
+
+All the data in the DynamoDB is automatically replicated to multiple availability zone.
+
+The Second difference, for the relational database if the traffic grows like crazy, we need to create a read replica 
+
+where the read traffic should read from read replica, then we need to change the code and everything because read replica gives you a separate url.
+
+With dynamodb. we don't need to do any of these things. Highly available, scalable and pay as you go.
+
+So if there is no traffic, we don't pay for lambda  and for DynamoDB If there is no traffic, we do not pay for any traffic, we only pay for the data storage.
+
+Whereas for MySQL RDS we pay a fixed cost even if there is no traffic.
+
+Now that we have the architecture explained, let's jump into the console, deploy this architecture
 
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
 
 
-An Amazon API Gateway is a collection of resources and methods. For this tutorial, you create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
