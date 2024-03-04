@@ -214,9 +214,9 @@ Let's test our newly created function. We haven't created DynamoDB and the API y
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4f8e4075-d32f-4c52-8511-bd72a2220582)
 
 
-2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from input event as
+2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform.
 
-   output. Click "Create" to save
+In this case, it'd simply return the payload from input event as output. Click "Create" to save
 
 ```json
 {
