@@ -66,7 +66,9 @@ Now that we have the architecture explained, let's jump into the console, deploy
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
 
 
-An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a 
+
+Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
@@ -102,7 +104,9 @@ The following is a sample request payload for a DynamoDB read item operation:
 }
 ```
 ## Setup
+
 ### Create Lambda IAM Role 
+
 Create the execution role that gives your function permission to access AWS resources.
 
 To create an execution role
@@ -150,9 +154,11 @@ To create an execution role
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/b63d5300-3b03-4d61-8efe-578f5870f596)
 
-2. Select "Author from scratch". Use name **LambdaFunctionOverHttps** , select **Python 3.7** as Runtime. Under Permissions, select "Use an existing role", and select **lambda-apigateway-role** that we created, from the drop down
+2. Select "Author from scratch". Use name **LambdaFunctionOverHttps** , select **Python 3.7** as Runtime. Under Permissions, select "Use an existing role", and select **lambda-
 
-3. Click "Create function"
+   apigateway-role** that we created, from the drop down
+
+4. Click "Create function"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/0b9f210c-44cb-46ba-b22d-c8fefcf4c546)
 
@@ -203,12 +209,15 @@ def lambda_handler(event, context):
 ### Test Lambda Function
 
 Let's test our newly created function. We haven't created DynamoDB and the API yet, so we'll do a sample echo operation. The function should output whatever input we pass.
+
 1. Click the arrow on "Select a test event" and click "Configure test events"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4f8e4075-d32f-4c52-8511-bd72a2220582)
 
 
-2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from input event as output. Click "Create" to save
+2. Paste the following JSON into the event. The field "operation" dictates what the lambda function will perform. In this case, it'd simply return the payload from input event as
+
+   output. Click "Create" to save
 
 ```json
 {
@@ -258,7 +267,9 @@ Create the DynamoDB table that the Lambda function uses.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/48bba13c-73c6-49bb-877f-9b3ae8518591)
 
-5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
+5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a
+
+resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
 
 Click "Actions", then click "Create Resource"
 
@@ -276,7 +287,9 @@ Click "Actions", then click "Create Resource"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/429bfb71-0316-4cf7-a337-5f69de90b2e9)
 
-9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name, your function name will show up.Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
+9. The integration will come up automatically with "Lambda Function" option selected. Select "LambdaFunctionOverHttps" function that we created earlier. As you start typing the name,
+
+your function name will show up.Select and click "Save". A popup window will come up to add resource policy to the lambda to be invoked by this API. Click "Ok"
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/fce973b6-5447-409a-a83f-18c760340f5c)
 
@@ -314,8 +327,11 @@ In this step, you deploy the API that you created to a stage called prod.
     }
 }
 ```
-2. To execute our API from local machine, we are going to use Postman and Curl command. You can choose either method based on your convenience and familiarity. 
-    * To run this from Postman, select "POST" , paste the API invoke url. Then under "Body" select "raw" and paste the above JSON. Click "Send". API should execute and return "HTTPStatusCode" 200.
+2. To execute our API from local machine, we are going to use Postman and Curl command. You can choose either method based on your convenience and familiarity.
+   
+    * To run this from Postman, select "POST" , paste the API invoke url. Then under "Body" select "raw" and paste the above JSON. Click "Send". API should
+
+execute and return "HTTPStatusCode" 200.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/b87fad28-9125-4ff9-8ae7-9152f5a814c1)
 
@@ -323,11 +339,15 @@ In this step, you deploy the API that you created to a stage called prod.
     ```
     $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://$API.execute-api.$REGION.amazonaws.com/prod/DynamoDBManager
     ```   
-3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select "lambda-apigateway" table, select "Items" tab, and the newly inserted item should be displayed.
+3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select "lambda-apigateway" table, select "Items" tab, and the newly
+
+inserted item should be displayed.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/2ac4a95a-d342-481f-aed3-4d0b461b381c)
 
-4. To get all the inserted items from the table, we can use the "list" operation of Lambda using the same API. Pass the following JSON to the API, and it will return all the items from the Dynamo table
+4. To get all the inserted items from the table, we can use the "list" operation of Lambda using the same API. Pass the following JSON to the API, and it will
+
+return all the items from the Dynamo table
 
 ```json
 {
