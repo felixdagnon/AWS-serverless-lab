@@ -8,11 +8,11 @@ Let's see these 2 diagrams considering create website:
 ![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/8f9ba5b1-7e7c-4aaa-aa18-97d496d421a8)
 
 
-Before doing the serverless microservice project,we will make the differences between non serverless and serverless architecture.
+Before doing the serverless microservice project, we will make the differences between non serverless and serverless architecture.
 
-In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS)  and serverless (API Gateway, lambda, DynamoDB) architecture.
+In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS) and serverless (API Gateway, lambda, DynamoDB) architecture.
 
-- The fisrt diagram We had to create ac2 and even when there is no traffic to our website, this is it is still up and running, 
+- The fisrt diagram We have to create ac2 and even when there is no traffic to our website, this is it is still up and running, 
 
 so we still need to pay for these ec2 even the utilization is very low.
 
@@ -34,7 +34,7 @@ We don't need to do anything.
 
 Another difference is for ec2 running the Web server in the first diagram, we have to go define the auto scaling group.
 
-If we have not defined that this is it, we won't be able to scale and you will get error. With lambda do not need to go define
+If we have not defined it, we won't be able to scale and you will get error. With lambda we do not need to go define
 
 any auto scaling group. If there are multiple traffic, this lambda will scale up automatically and handle that traffic.
 
@@ -42,9 +42,9 @@ Another advantage Lambda is highly available. So even when one availability zone
 
 - Now the underlying database will be Dynamo.
 
-So Dynamo DB is a double OSS flagship, no SQL database compared to RDS, which is a relational database.
+So DynamoDB is a double OSS flagship, no SQL database compared to RDS, which is a relational database.
 
-And the difference here is for RDS, we made it multi AZ by clicking option but we pay for it but the failover is automatic.
+And the difference here is for RDS, we madke it multi AZ by clicking option, we pay for it but the failover is automatic.
 
 But with DynamoDB it is inherently highly available. We don't need to go select anything.
 
