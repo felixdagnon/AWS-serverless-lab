@@ -153,9 +153,9 @@ To create an execution role
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/b63d5300-3b03-4d61-8efe-578f5870f596)
 
-2. Select "Author from scratch". Use name **LambdaFunctionOverHttps** , select **Python 3.7** as Runtime. Under Permissions, select "Use an existing role", and select **lambda-
+2. Select "Author from scratch". Use name **LambdaFunctionOverHttps** , select **Python 3.7** as Runtime.
 
-   apigateway-role** that we created, from the drop down
+Under Permissions, select "Use an existing role", and select **lambda-apigateway-role** that we created, from the drop down
 
 4. Click "Create function"
 
