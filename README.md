@@ -66,9 +66,9 @@ Now that we have the architecture explained, let's jump into the console, deploy
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
 
 
-An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. The method is backed by a
+An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. 
 
-Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when you call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
