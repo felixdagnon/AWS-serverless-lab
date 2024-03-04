@@ -266,9 +266,9 @@ Create the DynamoDB table that the Lambda function uses.
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/48bba13c-73c6-49bb-877f-9b3ae8518591)
 
-5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services. Typically, API resources are organized in a
+5. Each API is collection of resources and methods that are integrated with backend HTTP endpoints, Lambda functions, or other AWS services.
 
-resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
+Typically, API resources are organized in a resource tree according to the application logic. At this time you only have the root resource, but let's add a resource next 
 
 Click "Actions", then click "Create Resource"
 
