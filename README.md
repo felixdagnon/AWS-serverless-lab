@@ -1,5 +1,4 @@
-# AWS serverless-lab API Gateway, lambda, DynamoDB
-Level up Lab for serverless
+Level up Lab for serverless API Gateway, lambda, DynamoDB
 
 Introduction
 
