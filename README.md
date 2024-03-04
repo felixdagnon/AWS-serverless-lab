@@ -1,7 +1,6 @@
 # AWS serverless-lab
 Level up Lab for serverless
 
-
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
 
 
