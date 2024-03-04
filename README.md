@@ -7,7 +7,6 @@ Let's see these 2 diagrams considering create website:
 
 ![image](https://github.com/felixdagnon/Serverless-lab/assets/91665833/8f9ba5b1-7e7c-4aaa-aa18-97d496d421a8)
 
-
 Before doing the serverless microservice project, we will make the differences between non serverless and serverless architecture.
 
 In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS) and serverless (API Gateway, lambda, DynamoDB) architecture.
