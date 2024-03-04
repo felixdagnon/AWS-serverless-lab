@@ -1,4 +1,4 @@
-# AWS serverless-lab
+# AWS serverless-lab API Gateway, lambda, DynamoDB
 Level up Lab for serverless
 
 Introduction
@@ -60,7 +60,7 @@ So if there is no traffic, we don't pay for lambda  and for DynamoDB If there is
 
 Whereas for MySQL RDS we pay a fixed cost even if there is no traffic.
 
-Now that we have the architecture explained, let's jump into the console, deploy this architecture
+Now that we have the architecture explained, let's jump into the console, deploy this architecture.
 
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
