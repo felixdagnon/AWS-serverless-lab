@@ -14,9 +14,9 @@ In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS) and 
 
 so we still need to pay for these ec2 even the utilization is very low.
 
-A similarly for RDS, we needed to select EC2 instance type.And even when there is no utilization, we still need to pay for this instance 
+A similarly for RDS, we needed to select EC2 instance type. And even when there is no utilization, we still need to pay for this instance 
 
-as well as the secondary instance that's created because of the multi AC database.
+as well as the secondary instance that's created because of the multi AZ database.
 
 Another thing is we needed to define the auto scaling group and we have to define when to scale out and all that stuff.
 
