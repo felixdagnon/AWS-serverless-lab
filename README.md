@@ -72,9 +72,9 @@ An Amazon API Gateway is a collection of resources and methods. For this demo, w
 
 and define one method (POST) on it. 
 
-The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint, Amazon API 
+The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint,
 
-Gateway invokes the Lambda function.
+Amazon API Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
