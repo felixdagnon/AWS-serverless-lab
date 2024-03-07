@@ -40,7 +40,7 @@ Another advantage Lambda is highly available. So even when one availability zone
 
 - Now the underlying database will be Dynamo.
 
-So DynamoDB is a double OSS flagship, no SQL database compared to RDS, which is a relational database.
+DynamoDB is a double OSS flagship, no SQL database compared to RDS, which is a relational database.
 
 And the difference here is for RDS, we madke it multi AZ by clicking option, we pay for it but the failover is automatic.
 
