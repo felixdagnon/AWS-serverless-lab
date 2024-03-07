@@ -48,13 +48,13 @@ But with DynamoDB it is inherently highly available. We don't need to go select 
 
 All the data in the DynamoDB is automatically replicated to multiple availability zone.
 
-The Second difference, for the relational database if the traffic grows like crazy, we need to create a read replica 
+The Second difference, for the relational database if the traffic grows like crazy, we need to create a read replica and
 
-where the read traffic should read from read replica, then we need to change the code and everything because read replica gives you a separate url.
+where the read traffic should read from read replica. For that we need to change the code and everything because read replica gives a separate url.
 
 With dynamodb. we don't need to do any of these things. Highly available, scalable and pay as you go.
 
-So if there is no traffic, we don't pay for lambda  and for DynamoDB If there is no traffic, we do not pay for any traffic, we only pay for the data storage.
+So if there is no traffic, we don't pay for lambda and for DynamoDB If there is no traffic, we do not pay for any traffic, we only pay for the data storage.
 
 Whereas for MySQL RDS we pay a fixed cost even if there is no traffic.
 
