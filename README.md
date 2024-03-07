@@ -14,9 +14,9 @@ In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS) and 
 
 so we still need to pay for these ec2 even the utilization is very low.
 
-A similarly for RDS, we needed to select EC2 instance type. And even when there is no utilization, we still need to pay for this instance 
+A similarly for RDS, we needed to select EC2 instance type. And even when there is no utilization, we still need to pay for this 
 
-as well as the secondary instance that's created because of the multi AZ database.
+instance as well as the secondary instance that's created because of the multi AZ database.
 
 Another thing is we needed to define the auto scaling group and we have to define when to scale out and all that stuff.
 
@@ -50,11 +50,15 @@ All the data in the DynamoDB is automatically replicated to multiple availabilit
 
 The Second difference, for the relational database if the traffic grows like crazy, we need to create a read replica and
 
-where the read traffic should read from read replica. For that we need to change the code and everything because read replica gives a separate url.
+where the read traffic should read from read replica. For that we need to change the code and everything because read replica gives a 
+
+separate url.
 
 With dynamodb. we don't need to do any of these things. Highly available, scalable and pay as you go.
 
-So if there is no traffic, we don't pay for lambda and for DynamoDB If there is no traffic, we do not pay for any traffic, we only pay for the data storage.
+So if there is no traffic, we don't pay for lambda and for DynamoDB If there is no traffic, we do not pay for any traffic, we only pay 
+
+for the data storage.
 
 Whereas for MySQL RDS we pay a fixed cost even if there is no traffic.
 
@@ -64,9 +68,13 @@ Now that we have the architecture explained, let's jump into the console, deploy
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
 
 
-An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one method (POST) on it. 
+An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one 
 
-The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint, Amazon API Gateway invokes the Lambda function.
+method (POST) on it. 
+
+The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint, Amazon API 
+
+Gateway invokes the Lambda function.
 
 The POST method on the DynamoDBManager resource supports the following DynamoDB operations:
 
