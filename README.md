@@ -50,9 +50,9 @@ All the data in the DynamoDB is automatically replicated to multiple availabilit
 
 The Second difference, for the relational database if the traffic grows like crazy, we need to create a read replica and
 
-where the read traffic should read from read replica. For that we need to change the code and everything because read replica gives a 
+where the read traffic should read from read replica. For that we need to change the code and everything because read replica 
 
-separate url.
+gives a separate url.
 
 With dynamodb. we don't need to do any of these things. Highly available, scalable and pay as you go.
 
@@ -68,9 +68,9 @@ Now that we have the architecture explained, let's jump into the console, deploy
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/4bfee298-e986-46cd-8b34-7c0e7cb5057b)
 
 
-An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) and define one 
+An Amazon API Gateway is a collection of resources and methods. For this demo, we create one resource (DynamoDBManager) 
 
-method (POST) on it. 
+and define one method (POST) on it. 
 
 The method is backed by a Lambda function (LambdaFunctionOverHttps). That is, when we call the API through an HTTPS endpoint, Amazon API 
 
