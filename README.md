@@ -10,7 +10,7 @@ Before doing the serverless microservice project, we will make the differences b
 
 In our case non serverless (ALB, multiAZ,autoscalling group, EC2,MySQL RDS) and serverless (API Gateway, lambda, DynamoDB) architecture.
 
-- The fisrt diagram We have to create Ec2 and even when there is no traffic to our website, this is it is still up and running, 
+- The fisrt diagram we have to create Ec2 and even when there is no traffic to our website, this is it is still up and running, 
 
 so we still need to pay for these ec2 even the utilization is very low.
 
