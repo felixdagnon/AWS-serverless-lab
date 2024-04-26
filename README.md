@@ -367,7 +367,7 @@ return all the items from the Dynamo table
 ```
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/21474b21-71e5-4cfe-b064-e06d4f879665)
 
-5. The Lambda function supports using the create operation to update an item in our DynamoDB table. To request this operation, use the following JSON:
+5. The Lambda function supports using the "update" operation to update an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
@@ -388,7 +388,7 @@ return all the items from the Dynamo table
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/62fe43be-4b1e-47c0-a7eb-6ecf30d186c9)
 
-6. The Lambda function supports using the create operation to delete an item in our DynamoDB table. To request this operation, use the following JSON:
+6. The Lambda function supports using the "delete" operation to delete an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
@@ -404,7 +404,7 @@ return all the items from the Dynamo table
 
 ![image](https://github.com/felixdagnon/AWS-serverless-lab/assets/91665833/7e037214-de23-45e7-a1f2-497657ea4728)
 
-7. The Lambda function supports using the create operation to read an item in our DynamoDB table. To request this operation, use the following JSON:
+7. The Lambda function supports using the "read" operation to read an item in our DynamoDB table. To request this operation, use the following JSON:
 
 ```json
 {
